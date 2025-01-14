@@ -130,8 +130,6 @@ $$
 
 通过推导可证明稳健的预测基本元素数量的*下界* ，可以保证测试样本的分割质量，通过Certified Pixel Accuracy、Certified F-score 或 Certified IoU 等指标来衡量。
 
-<div style="page-break-after: always"></div>
-
 ## 本文设计
 
 ### 独立下采样
@@ -142,5 +140,24 @@ $$
 $$
 这种下采样策略具有普适性，可以用于分类和分割任务。
 
-### 验证多模态分类
+### 聚合分类器
 
+给定测试输入 $\mathbf M=(\mathbf m_1,\mathbf m_2,\cdots,\mathbf m_T)$ ，经过下采样得到 $\mathcal Z=(\mathbf z_1,\mathbf z_2,\cdots,\mathbf z_T)$ 。用 $g$ 表示多模态模型，则 $g(\mathcal Z)$ 表示模型在下采样后的输入 $\mathcal Z$ 上的预测。
+
+对于任意的分类标签 $l \in {1,2,\cdots,C}$ （$C$ 是类别数），使用 $p_l$ 表示**标签概率** (Label Probability)，即：
+$$
+p_l=\Pr(l=g(\mathcal Z))
+$$
+在实际工程中，计算标签概率开销很大，因此使用蒙特卡洛下采样来计算 $p_l$ 的上界 $\overline{p_l}$ 和下界 $\underline{p_l}$ 。从 $\mathcal Z$ 中随机抽取 $N$ 个消融输入，记作 $\mathbf Z_1,\mathbf Z_2,\cdots,\mathbf Z_N$ ，其**标签频率** (Label Frequency) 为：
+$$
+N_l=\sum_{i=1}^N\mathbb I(g(\mathbf Z_i)=l)
+$$
+聚合分类器输出标签频率 $N_l$ 最大的分类 $l$ 。
+
+> **用于分割任务的聚合分类器**
+> 
+> 用于分割任务的聚合分类器原理与上述聚合分类器相似。本质上，此论文将用于分割任务的多模态模型 $G$ 看作是多个分类器的集合。例如，在图像分割任务中，对于第 $j$ 个像素，聚合分类器将会输出标签频率 $N_l^j$ 最大的分类 $l$ 。
+
+## 实验及结论
+
+MMCert 优于现有的最先进的方法*随机消融*。对于 $r_1$ 和 $r_2$ 的所有组合，MMCert 在分类和分割两种任务上都始终优于随机消融。例如，在 RAVDESS 数据集上，当 $r1=r2=8$（攻击者可以修改 8 帧的视觉和音频模式）时，MMCert 可以保证对超过 40% 的测试样本的正确预测，而随机消融可以保证 0% 的测试样本。
