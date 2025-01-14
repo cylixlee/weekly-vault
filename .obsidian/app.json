@@ -8,7 +8,7 @@
     "downscalePercent": 84
   },
   "showInlineTitle": false,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "strictLineBreaks": true,
   "showLineNumber": false,
   "livePreview": true,

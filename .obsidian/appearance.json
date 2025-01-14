@@ -6,6 +6,8 @@
   "baseFontSize": 17,
   "enabledCssSnippets": [
     "linebreaks",
-    "fonts"
+    "fonts",
+    "font",
+    "pagebreak"
   ]
 }
