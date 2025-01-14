@@ -1,0 +1,11 @@
+{
+  "interfaceFontFamily": "Microsoft YaHei UI",
+  "textFontFamily": "IBM Plex Serif,IBM Plex Sans SC",
+  "monospaceFontFamily": "IBM Plex Mono",
+  "baseFontSizeAction": true,
+  "baseFontSize": 17,
+  "enabledCssSnippets": [
+    "linebreaks",
+    "fonts"
+  ]
+}
