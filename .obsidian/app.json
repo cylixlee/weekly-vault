@@ -12,5 +12,6 @@
   "strictLineBreaks": true,
   "showLineNumber": false,
   "livePreview": true,
-  "defaultViewMode": "source"
+  "defaultViewMode": "source",
+  "alwaysUpdateLinks": true
 }
