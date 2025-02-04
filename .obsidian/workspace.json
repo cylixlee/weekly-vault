@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "965b5efd0345eaa6",
+        "id": "11715fa260459e3f",
         "type": "tabs",
         "children": [
           {
-            "id": "a145a455dd01800f",
+            "id": "3fd975d101857dfb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -138,7 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Towards Deep Learning Models Resistant to Adversarial  Attacks.md"
+                "file": "Papers/Towards Deep Learning Models Resistant to Adversarial  Attacks.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Towards Deep Learning Models Resistant to Adversarial  Attacks 的大纲"
@@ -161,11 +165,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a145a455dd01800f",
+  "active": "3fd975d101857dfb",
   "lastOpenFiles": [
-    "Papers/A Fourier Perspective of Feature Extraction and Adversarial Robustness.md",
+    "Output/Towards Deep Learning Models Resistant to Adversarial  Attacks.pdf",
     "Papers/MMCert - Provable Defense against Adversarial Attacks to Multi-modal Models.md",
     "Papers/Towards Deep Learning Models Resistant to Adversarial  Attacks.md",
+    "Papers/A Fourier Perspective of Feature Extraction and Adversarial Robustness.md",
+    "Images/Adversarial Decision Boundary.png",
+    "Images/Adversarial Training.png",
     "未命名.md",
     "Output/A Fourier Perspective of Feature Extraction and Adversarial Robustness.pdf",
     "Images/F-PGD-L.png",
@@ -182,7 +189,6 @@
     "新建 文本文档.txt",
     "Output/MMCert2.pdf",
     "Output/MMCert.pdf",
-    "Output/250113 周报.pdf",
-    "Output"
+    "Output/250113 周报.pdf"
   ]
 }

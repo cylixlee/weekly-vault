@@ -18,12 +18,12 @@
     "open": true,
     "scale": 84,
     "landscape": false,
-    "marginTop": "10",
-    "marginBottom": "10",
-    "marginLeft": "10",
-    "marginRight": "10",
-    "displayHeader": false,
-    "displayFooter": false,
+    "marginTop": "16",
+    "marginBottom": "16",
+    "marginLeft": "20",
+    "marginRight": "20",
+    "displayHeader": true,
+    "displayFooter": true,
     "cssSnippet": "0"
   }
 }
